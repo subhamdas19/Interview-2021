@@ -49,6 +49,29 @@ Given a string a3b2c1d2
 decrypt
 
 
+INFORMATICA ROUND 2
+Find the next smaller element of each element in array
+
+[[4, 8, 5, 2, 25}
+[2,2,2,-1]
+
+brute force and stack based approach and scan from right side..
+
+
+why do we use kafka to communicate between services
+any other way to communicate
+why we use messaging system
+
+what is garbage collection in java.how its done
+
+
+FRESHWORKS ROUND 2
+Find the longest palindromic substring.
+brute force,recusrsion,corner case,tabular and odd length,even length
+
+db design of project
+what if parts do not come from other service./
+
 
 
 
