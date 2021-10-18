@@ -131,4 +131,63 @@ while (!s.isEmpty() && input[s.peek()] < input[i]) {
 			}
 
 
+FRESHWORKS ROUND 3
+FIND ALL PAIRS HAVING GIVEN SUM IN ARRAY
 
+I GAVE SOLN FOR ALL ELEMENTS HAVING GIVEN SUM EQUAL TO K IN ARRAY
+
+HE SAID OK
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class Test {
+
+    static void sumArrays(int arr[],int n,int target) {
+
+        int cur_sum = 0;
+        HashMap<Integer, List<Integer>> mp = new HashMap<>();
+        //for 0 sum,corner case
+        if (!mp.containsKey(0)) {
+            mp.put(0, new ArrayList<>());
+            mp.get(0).add(-1);
+        }
+
+        for (int i = 0; i < n; i++) {
+            cur_sum += arr[i];
+            if (mp.containsKey(cur_sum - target)) {
+                List<Integer> vals = mp.get(cur_sum - target);
+                for (Integer val : vals) {
+                    canprintArray(arr, val + 1, i);
+                }
+
+            }
+            if (!mp.containsKey(cur_sum)) {
+                mp.put(cur_sum, new ArrayList<>());
+                mp.get(cur_sum).add(i);
+            }
+
+        }
+    }
+    static void canprintArray(int arr[],int i,int j)
+    {
+        System.out.println(IntStream.range(i,j+1).mapToObj(l->arr[l]).collect(Collectors.toList()));
+    }
+    public static void main(String[] args)
+    {
+        int arr[]={3, 5, -2, 1, 2, 0};
+        int n= arr.length;
+        int target=3;
+        sumArrays(arr,n,target);
+    }
+}
+
+WHAT IS ADVANTAGE OF DOCKER
+WHAT IS LAYERS IN DOCKER
+WHY DOCKER AND NOT ZIP FILE
+DIFFERENCE BETWEEN GIT MERGE AND GIT REBASE
+WHY KAFKA AND NOT RABBIT MQ
+WJAT IS KAFKA. AND EXPLAIN KAFKA WHAT IS IT USED FOR
