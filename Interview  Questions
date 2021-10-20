@@ -260,3 +260,6 @@ class Main
         System.out.println(Arrays.toString(A));
     }
 }
+o(n)
+
+for storing relative order need to see
