@@ -438,5 +438,142 @@ what about rank function in oracle
 reverese a decimal number
 
 
+JP MORGAN ROUND 2
+
+What all things u keep in mind while designing APIs
+like from ui and backend
+what all things u need to have in backend
+for eg take upload api
+what from formdata in ui and backend multipart request
+what if upload multiple files and single file
+then multipart[] and multipart in request parameter
+how to control size of file
+will it throw an error if exceeds
+
+lets say you have a hashpap with key as username,emailid and id
+and value as user object
+what all things u need to have for hashmap to function efficiently?
+
+we need to override and hashcode maethid with those 3 fields of key
+
+lets say you have a class woth method
+and we extend that class with metthod overriding
+what if the method in base class throws null poinyer exception,what will happen to the overriden method
+how will we catch tat excepiom
+
+hmmm the root class exception will propagate to child class too so we need to handle it
+
+
+in ur project how have u handled exceptions in various layers
+in ur spring boot what sort of validatuons u have done for the request to be sanitised
+
+impleneted filete,there authorixation code for roles
+apart from that use @non null and @min and @max
+and business level validations and throwing exception if that value not there
+how the user will understand the messages
+using log messages,exception stack trace and custom error codes in gigsky
+
+
+now suppose we have an arraylist and we perform multiple add remove 
+should we use another data structure to minimise the cost ,or should we use arraylist itself
+we can use doubly linked list
+addfirst addlast methods etc
+
+in array list random access using indexes
+
+in sql soide
+what have u used
+have u used relationships
+have u used stored procedures
+what if u desugn a table and that is read heavy what all things u keep in mind
+eg..use indexes,how those indexes mainatain a separate table and they sort it so that we can fetch it and fetch the record from table
+for eg we need to search email id,
+we create index of email id and sort it...so search is faster
+
+we need to read table based on email ids
+
+now multithreading
+suppose a thread t3 starts first,then thread t1 starts and first and then t3 starrts and finishes
+use join
+
+now suppose if a thread enters a deadlock state ,we want that thread to execute for a particular amt of time
+use executor service.scheduledthread methiod
+
+code question
+
+List of random numbers
+pairs of elements present there
+
+
+
+1,1,2,2,3
+
+not necessary that list is sorted
+
+1133561122376
+1-2
+3-1
+5-0
+6-1
+2-1
+7-0
+
+count pairs of elements present
+
+
+1,1,1
+
+
+
+
+
+
+PSEUDO CODE
+
+APPROACH 1
+HashMap<Integer,Integer> mp=new HashMap<>();
+count the frequency of each of the elements in array
+
+
+Iterate through each of the keys in Hashmap mp
+   for each of the keys,divide the value of the key by 2 and store it in variable x
+    	that is x=Math.floor(Mp.get(key)/2);
+
+	System.out.println(“Key”:mp.getKey())
+	System.out.println(“Pair count”:x)
+
+
+Complexity:o(n)
+space complexity:o(n)
+
+
+APPROACH 2
+
+
+Arrays.sort(array);
+For(int i=0;i<n;i++)
+{
+While(are[i]==arr[i+1] && i<n)
+{
+count++
+i++;
+}
+
+print arr[i] and count/2;
+
+Count =1//for next set of duplicate elements;
+}
+
+Complexity(O(nlogn+n)
+
+
+
+
+
+
+
+
+
+
 
 
