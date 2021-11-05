@@ -568,6 +568,90 @@ Complexity(O(nlogn+n)
 
 
 
+THIRD ROUND VP
+Why jpmc not oracle
+how good at voding
+role for 5-6 years u only half
+
+given a string give the count of vowels in it
+a-3
+e-2
+
+
+also sort the values based on frequency
+
+public class Test {
+
+
+    static void numberOfVowels(String s)
+    {
+        Map<Character,Integer> mp=new HashMap<>();
+        mp.put('a',0);
+        mp.put('e',0);
+        mp.put('i',0);
+        mp.put('o',0);
+        mp.put('u',0);
+        int n=s.length();
+        List<Character> chars= Arrays.asList('a','e','i','o','u');
+        for(int i=0;i<s.length();i++)
+        {
+            if(chars.contains(s.charAt(i))) {
+                if (mp.containsKey(s.charAt(i))) {
+                    mp.put(s.charAt(i), mp.get(s.charAt(i)) + 1);
+                } else {
+                    mp.put(s.charAt(i), 0);
+                }
+            }
+
+        }
+//implement a comparator with hashmap
+        PriorityQueue<Integer> p=new PriorityQueue<>((a,b)->mp.get(a)-mp.get(b));
+        for(Character c:mp.keySet())
+        {
+            p.add(mp.get(c));
+        }
+
+
+        while(!p.isEmpty())
+        {
+            System.out.println()
+        }
+
+
+
+        for(Map.Entry<Character,Integer> m:mp.entrySet())
+        {
+            System.out.println("Character "+m.getKey()+" "+"Count "+m.getValue());
+        }
+
+
+
+//        int n=s.length();
+//        int count=0;
+//        List<Character> chars= Arrays.asList('a','e','i','o','u');
+//        for(int i=0;i<s.length();i++)
+//        {
+//            if(chars.contains(s.charAt(i)))
+//            {
+//                count++;
+//            }
+//        }
+//        return count;
+
+    }
+    public static void main(String[] args)
+    {
+        String s="aeihhfghhhuiiiieeeesssssahhhh";
+        numberOfVowels(s);
+
+    }
+}
+
+//how many times a
+
+
+
+
 
 
 
