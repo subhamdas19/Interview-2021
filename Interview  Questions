@@ -693,6 +693,80 @@ Represent the fraction of two numbers in the string format
 https://www.geeksforgeeks.org/represent-the-fraction-of-two-numbers-in-the-string-format/
 NOT SURE IF SELECTED
 
+TARGET 1 ROUND
+WHAT ARE DIFFERENT WAYS TO CREATE OBJECT
+https://dzone.com/articles/5-different-ways-to-create-objects-in-java-with-ex
+
+WHAT IS DIFFERENCE BETWEEN ABSTRACT CLASS AND INTERFACE
+WHEN DO WE USE WHAT,SPECIFIC DIFFERENCE
+MULTIPLE IHERITANCE OF ITERFANCE,ABSTRACT CLASS CONSTRUCTOR...ETC
+
+SUPPOSE WE WANT TO GENERATE 5 OBJECTS AND 6TH TIME WE GET THE 5 TH OBJECT
+USE SINGLETON,INTRODUCE STATIC COUNT IF COUNT<5
+
+public class LimitClass {
+
+    private static LimitClass limInstance;
+    public static int objCount = 0;
+
+    private LimitClass(){
+        objCount++;
+    }
+
+    public static synchronized LimitClass getLimInstance(){
+        if(objCount < 5 ){
+            limInstance = new LimitClass();
+        }
+        return limInstance;
+    }
+}
+
+public class LimitObjectCreationTest {
+
+    public static void main(String[] args) {
+
+        LimitClass obj1 = LimitClass.getLimInstance();
+        LimitClass obj2 = LimitClass.getLimInstance();
+        LimitClass obj3 = LimitClass.getLimInstance();
+        LimitClass obj4 = LimitClass.getLimInstance();
+        LimitClass obj5 = LimitClass.getLimInstance();
+        LimitClass obj6 = LimitClass.getLimInstance();
+
+        System.out.println(obj1);
+        System.out.println(obj2);
+	
+	
+	
+	
+	
+	what is static
+	what is immutable class
+	what if immutable class has mutable object/collection
+	what is working of hashmap
+	what data structure for nodes in hashmap
+	is hashmap thead safe
+	collections.synchronized map
+	whay concuurent
+	for get operation,any lock required in concurrent hashmap
+	
+	ways to break singleton pattern
+	
+	in deserilaization,any constructor used to create object?
+	what if we have parameterized constructor?what if we create object?error
+	should have a non parameterized constructor
+	what error will throe?compile/run time
+	
+	--------
+	
+	microsoft 1 st round
+	Next Greater Frequency Element
+	https://www.geeksforgeeks.org/next-greater-frequency-element/
+	
+	
+	
+	
+	
+
 
 
 
