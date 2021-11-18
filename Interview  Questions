@@ -764,6 +764,10 @@ public class LimitObjectCreationTest {
 	
 	
 	
+	JPA two transaction updating the same rows
+	https://stackoverflow.com/questions/45544248/jpa-two-transaction-updating-the-same-rows
+	
+	
 	
 	
 
