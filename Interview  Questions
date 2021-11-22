@@ -770,6 +770,505 @@ public class LimitObjectCreationTest {
 	
 	
 	
+	SAP LABS 2nd round
+	Producer consumer problem write what is the problem with code
+	then write the synchronized code
+	
+	will attach doc of spring boot desig question
+	
+	what will you do if two request try to update the same records at same time
+	use version-optimistic locking
+	
+	3RD ROUND
+	ALL HR Questions
+	what is saas paas
+	what is difference between soap and rest
+	what is rest
+	what we used earlier than rest in software web services
+	
+	
+	4TH ROUND
+	Give use case of Kafka in project
+	design spring boot apis
+	getTotalMarksOfAstudent
+payFees
+register a student
+capture marks for a student for different terms/semester
+paument of fees for a student
+
+
+src
+    main
+         java
+           controller
+                StudentController
+                FeesController
+                
+           Service
+                StudentService(Interface)
+                PaymentService(Interface)
+               Impl(folder)
+                      StudentServiceImpl
+                      PaymentServiceImpl
+           repository
+               StudentRepository
+
+
+
+@RequestMapping(“studentService”)
+Class StudentController
+{
+
+@Autowired
+Private StudentService studentService;
+
+ @RequestMapping(“/getAllStudents”,method=RequestMethod.GET)
+  Public List<StudentDto> getListOfStudents()
+{
+   Return studentService.getAllStudents();
+}
+
+
+
+
+
+
+GOLDMAN SACHS
+1st round
+
+/*  Round-1 started ****/
+Your previous Plain Text content is preserved below:
+
+
+
+
+"Chennai" -> "Banglore"
+"Bombay" -> "Delhi"
+"Goa"    -> "Chennai"
+"Delhi"  -> "Goa"
+
+
+
+//find the starting point
+//store inputs in a map for the given question
+//store the destination keys of those inputs as keys in destMap and values as starting point
+
+String startingPoint=null;;
+for(Map.Entry<String,String> originalMp:srcMap.entrySet())
+{
+if(!destMap.containsKey(originalMp.getKey())
+{
+startingPoint=originalMp.getKey();
+break;
+}
+}
+if(startingPoint==null/)
+{
+return "No startPoint";
+}
+
+
+
+Problem NUmber -2 
+
+Count total possible combinations of n-digit numbers in a mobile keypad
+
+Input:  n = 2
+ 
+Output: 36
+ 
+Exp :-  [00, 08, 11, 12, 14, 21, 22, 23, 25, … ,96, 98, 99]
+
+{ '1', '2', '3' },
+
+{ '4', '5', '6' },
+{ '7', '8', '9' },
+{ '*', '0', '#' }
+
+Key,Value
+
+2,{22,25,23}
+//no diagonal neighbours
+
+rowArray=[0,-1,0,1];
+colarray=[-1,0,1,0];
+(0-1,-10,10,
+
+for
+ 
+ /*  Round-1 Ended ****/
+ */}
+ 
+ 
+ 2nd round
+ Red Blue Green
+ 
+ Input: N = 3, cost[][3] = {{14, 2, 11}, {11, 14, 5}, {14, 3, 10}}
+ 
+ 
+ Objective: Paint all houses at optimal/minimum cost overall
+ 
+ Constraints:
+ 
+ No two adjacent houses are of same colour.
+ 
+ length 3
+ total 2
+ 
+  
+  14   2  11
+  13  25   7
+  21  10  23
+ 
+ 
+ 
+ for(int i=1;i<R;i++)
+ {
+   cost[i][0]+=Math.min(cost[i-1][1],cost[i-1][2]);
+   cost[i][1]+=Math.min(cost[i-1][0],cost[i-1][2]);
+   cost[i][2]+=Math.min(cost[i-1][0],cost[i-1][1]);
+ }
+ 
+ int length=cost.length-1;
+ return Math.min(cost[length][0],cost[length][1],cost[length][2]);
+ 
+ 
+ //matrix of n by n dimension
+ in sorted order
+ each row is sorted
+ previous rows last element is smaller than next rows 1st element
+ 
+ there is a number...check if the number is present in that matrix
+ 
+ 
+mat[][] = {{8,10,15,18},{20,27,30,35},{40,45,48,52}}
+ 
+ x= 45
+ 
+ 
+ //
+ 
+ i=0;
+ j=size-1;
+ 
+ given input:ele
+ 
+ while(i<size &&  j>=0)
+ {
+   if(matrix[i][j]==ele)
+   {
+     sopln(i and j);
+   }
+   if(matrix[i][j]<ele)
+   {
+     i++;
+   }
+   //takes 
+   if(matrix[i][j]>ele)
+   {
+     j--;
+   }
+   
+ }
+ 
+ 16 =4
+ 
+ 
+ 3rd round
+ 
+ square root of a number,can return double
+ 17 square root
+ public double squareroot (doube n){
+   
+   
+   
+ }
+ find the second largest element bst
+ iterative traversal of inorder in binary tree
+ 
+ 
+ 
+ 
+ WALMART
+ 1st Round
+ 
+ 1,2
+2-5
+5-6
+5-8
+===
+8
+
+
+
+Find the starting point
+also,what if they are repeating
+so here lets take a map of integer and integer
+
+
+so here..
+Map
+
+key.   value
+1	2
+2.         5
+5         6
+5         8
+
+
+Now I will take a destination map
+
+Key.    Value
+2	1
+5.        2
+6          5
+8          5
+
+
+Iterate through the original src->dest mp
+And check if that that src key is present in dest map’s key’s
+If not present that will be the starting point
+
+Src=
+
+Starting point = 1
+
+//storing the source map
+Map<Integer,Integer> mp=new HashMap<>();
+Int src[]={1,2,5,5};
+Int dest[]={2,5,6,8};
+
+Int n=src.length;
+Int k=dest.length;
+If(k!==n)
+Return -1;
+For(int i=0;i<n;i++)
+{
+
+Mp.put(src[i],dest[i]);
+}
+
+//this populates the source as key and dest as value
+
+
+Now we take the dest as key and value as source
+Map<Integer,Integet> destMp=new HashMap<>();
+
+For(int i=0;i<n;i++)
+{
+
+destMp.put(dest[i],src[i]);
+}
+
+Integer x=null;
+//iterating through the original map
+For(Map.Entry<Integer,Integer> m:mp.entrySet())
+{
+If(!destMp.containsKey(m.getKey())
+{
+
+X=m.getKey();
+Return x;
+
+}
+}
+If(x==null)
+{
+Return -1;
+}
+
+
+BALANCED PARANTHESIS
+[{()}]
+USE STACK
+Use case
+I=0
+
+
+[{())}]
+
+[{
+
+ALSO LIST OF COMMANDS
+CD a
+a -> b,c
+b->c,d
+
+check with list of commands if given sequence of commands is correct
+cd a
+cd b
+cd c
+..
+cd e
+
+
+use stack
+
+
+
+2nd round
+give examples of singleton pattern
+write singleton class
+make singleton class thread safe
+explain class level cocking and object level locking woth synchronized
+design two threads printing vowels and consonants similar to odd and even nos
+what is con current hashmap
+what if update and get operation on same key at same time
+use join
+what is thread pool
+why executor servoice
+diff type of executor service
+what is thread local
+what is volatile
+what is runnable callable
+difference what does it do
+Class Singleton
+{
+Private static Singleton object=null;
+Private Singleton()
+{
+}
+
+Private ¬¬¬¬synchronizedized static Singleton getObject()
+{
+   If(object==null)
+    {
+     object=new Singleton();
+}
+Return object;
+}
+
+
+Class Main
+{
+System giving a stream of characters
+These characters can be vowels and consonants to be produced by two different systems
+
+Class CharactersResult
+{
+
+Char A[]={‘a’,’b,c,d,e,f,g,h,I,j…}
+ArrayList<Character> vowels={‘a’,e,I,o,u};
+Public void printConsonants()
+{
+Synchronized(this)
+{
+
+While(vowels.contains(a[i]))
+{
+      Wait();
+
+
+}
+SOPLN(a[i]);
+i
+notify();
+}
+
+
+Public void printVowels ()
+{
+Synchronized(this)
+{
+
+While(!vowels.contains(a[i]))
+{
+      Wait();
+}
+System.out.println(a[i]);
+I++;
+Notify();
+
+
+}
+}
+
+
+
+}
+class Main
+{
+Public static void main(String[] args)
+{
+CharacterResult cr=new CharacterResult();
+Thread t1=new Thread(new Runnable()
+{
+@Override
+Public void run()
+{
+Cr.printConsonants();
+}});
+
+Thread t2=new Thread(new Runnable()
+{
+@Override
+Public void run()
+{
+Cr.printVowels ();
+}});
+
+T1.start();
+
+T2.start();
+
+}
+
+
+ 
+
+
+
+
+THIRD ROUND
+suppose db returns list of records with employee id,name and email id
+and db records have redundant data
+with repeated email ids and names for dofferent records
+return unique list
+
+anser
+equals and hashcode
+hashcode used for different bucket location
+why we need to override hashcode when we get equals method
+what is concurrent hashmap
+explain project architecture
+
+
+GROUPON 2nd round
+explian functionalities of movie ticket system
+explain db design
+
+
+third round
+explain project architecture
+hr questions
+
+
+
+salesforce first round
+advantages of java
+disadvanytage of java
+
+slower execution
+bytecode and jit
+
+garbage ciollection
+low performance etc
+
+Minimum number of jumps to reach end
+check whether we can reach end of array by jumps .returns yes or no
+
+
+
+
+
+
+
+ 
+ 
+	
+	
+	
+	
 
 
 
