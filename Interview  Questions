@@ -1231,6 +1231,9 @@ hashcode used for different bucket location
 why we need to override hashcode when we get equals method
 what is concurrent hashmap
 explain project architecture
+how to do connection pooling in java
+how to connect to database in java code
+define solid principles
 
 
 GROUPON 2nd round
@@ -1256,6 +1259,11 @@ low performance etc
 
 Minimum number of jumps to reach end
 check whether we can reach end of array by jumps .returns yes or no
+
+
+Salesforce 2 nd round
+Next greater element of each element i array and return array
+next greater element of each element in circular array
 
 
 
